@@ -14,6 +14,4 @@ process.on("exit", () => {
   stdout.write("Good bye\n");
 });
 
-read.on("line", (a) =>
-  a === "exit" ? process.exit() : fStream.write(a + "\n")
-);
+read.on("line", (a) => (a === "exit" ? process.exit() : text.write(a + "\n")));
